@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+    <ion-back-button defaultHref="/"></ion-back-button>
+  </ion-buttons>
+    <ion-title>status</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">status</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="myStatus">
+    <ion-item>
+      <ion-label>Happy</ion-label>
+      <ion-radio value="Happy" slot = "end"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sad</ion-label>
+      <ion-radio value="Sad" slot = "end"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Energetic</ion-label>
+      <ion-radio value="Energetic" slot = "end"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Lazy</ion-label>
+      <ion-radio value="Lazy" slot = "end"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+  </ion-list>
+
+  <ion-button (click) = "saveStatus()">SAVE</ion-button>
+</ion-content>
